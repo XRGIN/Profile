@@ -95,10 +95,6 @@
 
 
         .tilted {
-            background-color: teal;
-            width: 200px;
-            height: 200px;
-
             transform: rotateX(0deg);
             transform-origin: 50% 50%;
 
@@ -106,59 +102,147 @@
 
 
         .top-level {
-            margin: 20px 0 0 30px;
+            margin: 700px 0 0 500px;
 
         }
 
 
         .tilted1 {
-            background-color: teal;
-            width: 200px;
-            height: 200px;
-
-            transform: rotateX(0deg);
+            transform: rotateY(180deg);
             transform-origin: 50% 50%;
 
         }
 
 
         .top-level1 {
-            margin: 20px 0 0 30px;
+            margin: 200px 0 0 500px;
 
         }
 
-        .turn {
-            transform: rotateX(180deg);
+
+
+
+
+
+        .re {
+            animation-iteration-count: infinite;
             animation-duration: 1s;
-            animation-name: turn;
-
+            animation-name: re;
+            transform: rotateY(0deg);
+            animation-timing-function: cubic-bezier(0, 0, 0, 0);
         }
 
-        @keyframes turn {
+        @keyframes re {
             0% {
-                transform: rotateX(0deg);
+                transform: rotateY(180deg);
             }
 
             100% {
-                transform: rotateX(180deg);
+                transform: rotateY(-180deg);
             }
         }
 
-        .turn1 {
+        :root {
 
-            animation-duration: 1s;
-            animation-name: turn1;
-            transform: rotateX(0deg);
+
+            --bn-bg-primary: #8fbc8f;
+            --bn-bg-active: #73b173;
+            --bn-shadow-color: #2e8b57;
         }
 
-        @keyframes turn1 {
-            0% {
-                transform: rotateX(180deg);
-            }
+        button {
+            border: none;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
 
-            100% {
-                transform: rotateX(0deg);
-            }
+
+        button {
+
+            padding: .5em 1em;
+            border-radius: 6px;
+            box-shadow: 0 5px 0 0 var(--bn-shadow-color);
+            background: var(--bn-bg-primary);
+            color: #fff;
+            transition: all .1s ease-out;
+        }
+
+        button:hover {
+            background: var(--bn-bg-active);
+            box-shadow: 0 4px 0 0 var(--bn-shadow-color);
+            transform: translateY(1px);
+        }
+
+        button:hover:active {
+            box-shadow: 0 1px 0 0 var(--bn-shadow-color);
+            transform: translateY(4px);
+        }
+
+        #page {
+            background-color: rgb(220, 220, 220);
+            width: 100px;
+            height: 100px;
+            border-radius: 30px;
+            position: absolute;
+            top: 100px;
+            left: 1150px;
+            z-index: -999;
+
+        }
+
+        #page:hover {
+            background-color: rgb(236, 236, 236);
+            cursor: pointer;
+        }
+
+        #page2 {
+            background-color: rgb(190, 190, 190);
+            width: 100px;
+            height: 100px;
+            border-radius: 30px;
+            position: absolute;
+            top: 150px;
+            left: 1150px;
+            z-index: -999;
+        }
+
+        #page2:hover {
+            background-color: rgb(230, 230, 230);
+            cursor: pointer;
+        }
+
+        #page3 {
+            background-color: rgb(160, 160, 160);
+            width: 100px;
+            height: 100px;
+            border-radius: 30px;
+            position: absolute;
+            top: 200px;
+            left: 1150px;
+            z-index: -999;
+        }
+
+        #page3:hover {
+            background-color: rgb(200, 200, 200);
+            cursor: pointer;
+        }
+
+        #page4 {
+            background-color: rgb(130, 130, 130);
+            width: 100px;
+            height: 100px;
+            border-radius: 30px;
+            position: absolute;
+            top: 250px;
+            left: 1150px;
+            z-index: -999;
+        }
+
+        #page4:hover {
+            background-color: rgb(170, 170, 170);
+            cursor: pointer;
         }
     </style>
 </head>
@@ -169,39 +253,48 @@
     </div>
     <button id="ao" class="buttoncls">whitemood</button>
     <button id="co" class="buttoncls">darkmood</button>
+    <div id="page"></div>
+    <div id="page2"></div>
+    <div id="page3"></div>
+    <div id="page4"></div>
 
 
 
+    <div id="chan">
+        <div class="top-level bn" id="im" style="cursor: pointer;">
+            <div style="float:left">
+                <div id="view3d" style="perspective: 400px;">
+                    <div class="tilted">
+                        <p style="position: relative;text-align: center;top: 30%;">
+                            <button>Click to start round</button>
 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-level im1" style="cursor: pointer;">
+            <div style="float:left">
+                <div id="view3d" style="perspective: 400px;">
+                    <div class="tilted">
+                        <p style="position: relative;text-align: center;top: 30%;">
+                            <button>Click to stop round</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="top-level" id="im" style="cursor: pointer;">
-        <div style="float:left">
-            <div id="view3d" style="perspective: 400px;">
-                <div class="tilted">
-                    <p style="position: relative;text-align: center;">
-                        rotateX(45deg) ...
-                    </p>
+        <div class="top-level1" style="cursor: pointer;">
+            <div style="float:left">
+                <div id="view3d1" style="perspective: 400px;">
+                    <div class="tilted1">
+                        <img src="img/right-arrow.png" alt="" style="width: 50px;height: 50px;position: relative;">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="top-level1 im1">
-        <div style="float:left">
-            <div id="view3d1" style="perspective: 400px;">
-                <div class="tilted1">
-                    <p style="-moz-transform:scaleY(-1);
-                    -webkit-transform:scaleY(-1);
-                    -o-transform:scaleY(-1);
-                    transform:scaleY(-1);
-                    text-align: center;position: relative;top: 180px;">
-                        rotateX(45deg) ...
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
@@ -230,19 +323,73 @@
 
             $(".im1").hide();
             $("#im").click(function () {
-                $(".tilted").removeClass("turn1");
-                $(".tilted1").addClass("turn");
                 $(".im1").show();
                 $("#im").hide();
             });
             $(".im1").click(function () {
-                $(".tilted1").removeClass("turn");
-                $(".tilted").addClass("turn1");
                 $("#im").show();
                 $(".im1").hide();
+                $(".tilted1").removeClass("re")
+            });
+            $("#im").click(function () {
+                $(".tilted1").addClass("re")
+
             });
 
 
+
+            $("#page").click(function () {
+                $("#chan").show();
+                $("#page").css('z-index', '-996')
+                $("#page2").css('z-index', '-997')
+                $("#page3").css('z-index', '-998')
+                $("#page4").css('z-index', '-999')
+
+                $("#page").css('background-color', 'rgb(220, 220, 220)')
+                $("#page2").css('background-color', 'rgb(190, 190, 190)')
+                $("#page3").css('background-color', 'rgb(160, 160, 160)')
+                $("#page4").css('background-color', 'rgb(130, 130, 130)')
+            });
+
+            $("#page2").click(function () {
+                $("#chan").hide();
+                $(".tilted1").removeClass("re")
+                $("#page").css('z-index', '-997')
+                $("#page2").css('z-index', '-996')
+                $("#page3").css('z-index', '-998')
+                $("#page4").css('z-index', '-999')
+
+                $("#page").css('background-color', 'rgb(200, 200, 200)')
+                $("#page2").css('background-color', 'rgb(220, 220, 220)')
+                $("#page3").css('background-color', 'rgb(160, 160, 160)')
+                $("#page4").css('background-color', 'rgb(130, 130, 130)')
+            });
+            $("#page3").click(function () {
+                $("#chan").hide();
+                $(".tilted1").removeClass("re")
+                $("#page").css('z-index', '-998')
+                $("#page2").css('z-index', '-997')
+                $("#page3").css('z-index', '-996')
+                $("#page4").css('z-index', '-999')
+
+                $("#page").css('background-color', 'rgb(200, 200, 200)')
+                $("#page2").css('background-color', 'rgb(190, 190, 190)')
+                $("#page3").css('background-color', 'rgb(220, 220, 220)')
+                $("#page4").css('background-color', 'rgb(130, 130, 130)')
+            });
+            $("#page4").click(function () {
+                $("#chan").hide();
+                $(".tilted1").removeClass("re")
+                $("#page").css('z-index', '-999')
+                $("#page2").css('z-index', '-998')
+                $("#page3").css('z-index', '-997')
+                $("#page4").css('z-index', '-996')
+
+                $("#page").css('background-color', 'rgb(200, 200, 200)')
+                $("#page2").css('background-color', 'rgb(190, 190, 190)')
+                $("#page3").css('background-color', 'rgb(160, 160, 160)')
+                $("#page4").css('background-color', 'rgb(220, 220, 220)')
+            });
 
 
         });
