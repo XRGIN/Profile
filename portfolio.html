@@ -20,8 +20,8 @@
             display: inline-block;
             font-size: 16px;
             position: absolute;
-            left: 700px;
-            top: 850px;
+            left: 200px;
+            top: 800px;
             cursor: pointer;
             z-index: 0;
         }
@@ -102,7 +102,7 @@
 
 
         .top-level {
-            margin: 700px 0 0 500px;
+            margin: 500px 50 0 300px;
 
         }
 
@@ -115,7 +115,7 @@
 
 
         .top-level1 {
-            margin: 200px 0 0 500px;
+            margin: 200px 0 0 100px;
 
         }
 
@@ -130,11 +130,13 @@
             animation-name: re;
             transform: rotateY(0deg);
             animation-timing-function: cubic-bezier(0, 0, 0, 0);
-            
+
         }
+
         .restop {
             animation-play-state: paused;
         }
+
         @keyframes re {
             0% {
                 transform: rotateY(180deg);
@@ -142,7 +144,7 @@
 
             100% {
                 transform: rotateY(-180deg);
-                
+
             }
         }
 
@@ -186,13 +188,14 @@
 
         #page {
             background-color: rgb(220, 220, 220);
-            width: 100px;
+            width: 50px;
             height: 100px;
-            border-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
             position: absolute;
             top: 100px;
-            left: 1150px;
-            z-index: -996;
+            left: 800px;
+            z-index: 4;
 
         }
 
@@ -203,13 +206,14 @@
 
         #page2 {
             background-color: rgb(190, 190, 190);
-            width: 100px;
+            width: 50px;
             height: 100px;
-            border-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
             position: absolute;
             top: 150px;
-            left: 1150px;
-            z-index: -997;
+            left: 800px;
+            z-index: 3;
         }
 
         #page2:hover {
@@ -219,13 +223,14 @@
 
         #page3 {
             background-color: rgb(160, 160, 160);
-            width: 100px;
+            width: 50px;
             height: 100px;
-            border-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
             position: absolute;
             top: 200px;
-            left: 1150px;
-            z-index: -998;
+            left: 800px;
+            z-index: 2;
         }
 
         #page3:hover {
@@ -235,13 +240,14 @@
 
         #page4 {
             background-color: rgb(130, 130, 130);
-            width: 100px;
+            width: 50px;
             height: 100px;
-            border-radius: 30px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
             position: absolute;
             top: 250px;
-            left: 1150px;
-            z-index: -999;
+            left: 800px;
+            z-index: 1;
         }
 
         #page4:hover {
@@ -249,14 +255,21 @@
             cursor: pointer;
         }
 
-        .man {
+        #chan {
+            position: absolute;
+            left: 500px;
+        }
+
+        #man {
             background-color: black;
             width: 50px;
             height: 50px;
             border-radius: 50px;
-            position: relative;
-            top: 780px;
-            left: 580px;
+            position: absolute;
+            top: 750px;
+            left: 500px;
+            z-index: 5;
+
         }
     </style>
 </head>
@@ -264,71 +277,71 @@
 <body class="bg">
     <div class="div1">
         <a href="index.html"><img src="img/home.png" class="home"></a>
-    </div>
-    <button id="ao" class="buttoncls">whitemood</button>
-    <button id="co" class="buttoncls">darkmood</button>
-    <div id="page"></div>
 
-    <div id="chan">
-        <div class="top-level bn" id="im" style="cursor: pointer;">
-            <div style="float:left">
-                <div id="view3d" style="perspective: 400px;">
-                    <div class="tilted">
-                        <p style="position: relative;text-align: center;top: 30%;">
-                            <button>Click to start round</button>
+        <button id="ao" class="buttoncls">whitemood</button>
+        <button id="co" class="buttoncls">darkmood</button>
+        <div id="page"></div>
 
-                        </p>
+        <div id="chan">
+            <div class="top-level bn" id="im" style="cursor: pointer;">
+                <div style="float:left">
+                    <div id="view3d" style="perspective: 400px;">
+                        <div class="tilted">
+                            <p style="position: relative;text-align: center;top: 30%;">
+                                <button>Click to start round</button>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-level im1" style="cursor: pointer;">
+                <div style="float:left">
+                    <div id="view3d" style="perspective: 400px;">
+                        <div class="tilted">
+                            <p style="position: relative;text-align: center;top: 30%;">
+                                <button>Click to stop round</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-level1" style="cursor: pointer;">
+                <div style="float:left">
+                    <div id="view3d1" style="perspective: 400px;">
+                        <div class="tilted1">
+                            <img src="img/right-arrow.png" alt="" style="width: 50px;height: 50px;position: relative;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="top-level im1" style="cursor: pointer;">
-            <div style="float:left">
-                <div id="view3d" style="perspective: 400px;">
-                    <div class="tilted">
-                        <p style="position: relative;text-align: center;top: 30%;">
-                            <button>Click to stop round</button>
-                        </p>
-                    </div>
-                </div>
-            </div>
+
+        <div id="jqgame">
+            <button id="gamestart" style="position: absolute;left: 500px;top: 800px;">start</button>
+            <div id="man"></div>
         </div>
 
-        <div class="top-level1" style="cursor: pointer;">
-            <div style="float:left">
-                <div id="view3d1" style="perspective: 400px;">
-                    <div class="tilted1">
-                        <img src="img/right-arrow.png" alt="" style="width: 50px;height: 50px;position: relative;">
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div id="page2"></div>
+        <div id="page3"></div>
+        <div id="page4"></div>
+
+
+
+
     </div>
-
-    <div id="jqgame">
-        <button id="gamestart" style="position: absolute;left: 500px;top: 800px;">start</button>
-        <div class="man"></div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    
-    <div id="page2"></div>
-    <div id="page3"></div>
-    <div id="page4"></div>
-
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
@@ -367,19 +380,21 @@
                 $(".im1").hide();
                 $(".tilted1").addClass("restop");
             });
-            
 
 
-            
+
+
 
             $("#jqgame").hide();
+            $("#man").hide();
             $("#chan").show();
             $("#page").click(function () {
                 $("#chan").show();
-                $("#page").css('z-index', '-996')
-                $("#page2").css('z-index', '-997')
-                $("#page3").css('z-index', '-998')
-                $("#page4").css('z-index', '-999')
+                $("#jqgame").hide();
+                $("#page").css('z-index', '4')
+                $("#page2").css('z-index', '3')
+                $("#page3").css('z-index', '2')
+                $("#page4").css('z-index', '1')
 
                 $("#page").css('background-color', 'rgb(200, 200, 200)')
                 $("#page2").css('background-color', 'rgb(190, 190, 190)')
@@ -422,11 +437,12 @@
             $("#page2").click(function () {
                 $("#chan").hide();
                 $("#jqgame").show();
+                $("#man").show();
                 $(".tilted1").removeClass("re")
-                $("#page").css('z-index', '-997')
-                $("#page2").css('z-index', '-996')
-                $("#page3").css('z-index', '-998')
-                $("#page4").css('z-index', '-999')
+                $("#page").css('z-index', '3')
+                $("#page2").css('z-index', '4')
+                $("#page3").css('z-index', '2')
+                $("#page4").css('z-index', '1')
 
                 $("#page").css('background-color', 'rgb(200, 200, 200)')
                 $("#page2").css('background-color', 'rgb(220, 220, 220)')
@@ -472,10 +488,10 @@
                 $("#chan").hide();
                 $("#jqgame").hide();
                 $(".tilted1").removeClass("re")
-                $("#page").css('z-index', '-998')
-                $("#page2").css('z-index', '-997')
-                $("#page3").css('z-index', '-996')
-                $("#page4").css('z-index', '-999')
+                $("#page").css('z-index', '2')
+                $("#page2").css('z-index', '3')
+                $("#page3").css('z-index', '4')
+                $("#page4").css('z-index', '1')
 
                 $("#page").css('background-color', 'rgb(200, 200, 200)')
                 $("#page2").css('background-color', 'rgb(190, 190, 190)')
@@ -519,10 +535,10 @@
                 $("#chan").hide();
                 $("#jqgame").hide();
                 $(".tilted1").removeClass("re")
-                $("#page").css('z-index', '-999')
-                $("#page2").css('z-index', '-998')
-                $("#page3").css('z-index', '-997')
-                $("#page4").css('z-index', '-996')
+                $("#page").css('z-index', '1')
+                $("#page2").css('z-index', '2')
+                $("#page3").css('z-index', '3')
+                $("#page4").css('z-index', '4')
 
                 $("#page").css('background-color', 'rgb(200, 200, 200)')
                 $("#page2").css('background-color', 'rgb(190, 190, 190)')
@@ -560,16 +576,32 @@
                 });
             });
 
+            var man = document.getElementById("man");
+        document.onkeydown = function (e) { //键盘按下事件绑定
+            var e = window.event || e;
+            switch (e.keyCode) {
+                case 37: //左
+                    man.style.left = Math.max(0, man.offsetLeft - 5) + "px";
+                    break;
+                case 38: //上
+                    man.style.top = Math.max(0, man.offsetTop - 5) + "px";
+                    break;
+                case 39:  //右
+                    man.style.left = Math.min(750, man.offsetLeft + 5) + "px";
+                    break;
+                case 40:  //下
+                    man.style.top = Math.min(750, man.offsetTop + 5) + "px";
+                    break;
+            }
+        }
 
 
 
 
-
-            $(".gamestart").click(function(){
-                $(".man").position(500,500)
-            });
+            
         });
     </script>
+
 
 
 
