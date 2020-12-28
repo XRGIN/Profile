@@ -576,29 +576,39 @@
                 });
             });
 
-            var man = document.getElementById("man");
-        document.onkeydown = function (e) { //键盘按下事件绑定
-            var e = window.event || e;
-            switch (e.keyCode) {
-                case 37: //左
-                    man.style.left = Math.max(0, man.offsetLeft - 5) + "px";
-                    break;
-                case 38: //上
-                    man.style.top = Math.max(0, man.offsetTop - 5) + "px";
-                    break;
-                case 39:  //右
-                    man.style.left = Math.min(750, man.offsetLeft + 5) + "px";
-                    break;
-                case 40:  //下
-                    man.style.top = Math.min(750, man.offsetTop + 5) + "px";
-                    break;
-            }
-        }
+
+            $(document).ready(function () {
+                $(window).keydown(function (event) {
+                    switch (event.keyCode) {
+                        case 38:
+                            man.style.top = Math.max(0, man.offsetTop - 10) + "px";
+                            break;
+                        case 40:
+                            man.style.top = Math.min(750, man.offsetTop + 10) + "px";
+                            break;
+                        case 37:
+                            man.style.left = Math.max(0, man.offsetLeft - 10) + "px";
+                            break;
+                        case 39:
+                            man.style.left = Math.min(750, man.offsetLeft + 10) + "px";
+                            break;
+
+                        case 37:
+                        case 38:
+                            man.style.top = Math.max(0, man.offsetTop - 100) + "px";
+                            break;
+                    }
 
 
 
 
-            
+
+                });
+            });
+
+
+
+
         });
     </script>
 
