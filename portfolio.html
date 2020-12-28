@@ -130,8 +130,11 @@
             animation-name: re;
             transform: rotateY(0deg);
             animation-timing-function: cubic-bezier(0, 0, 0, 0);
+            
         }
-
+        .restop {
+            animation-play-state: paused;
+        }
         @keyframes re {
             0% {
                 transform: rotateY(180deg);
@@ -139,6 +142,7 @@
 
             100% {
                 transform: rotateY(-180deg);
+                
             }
         }
 
@@ -188,12 +192,12 @@
             position: absolute;
             top: 100px;
             left: 1150px;
-            z-index: -999;
+            z-index: -996;
 
         }
 
         #page:hover {
-            background-color: rgb(236, 236, 236);
+
             cursor: pointer;
         }
 
@@ -205,7 +209,7 @@
             position: absolute;
             top: 150px;
             left: 1150px;
-            z-index: -999;
+            z-index: -997;
         }
 
         #page2:hover {
@@ -221,7 +225,7 @@
             position: absolute;
             top: 200px;
             left: 1150px;
-            z-index: -999;
+            z-index: -998;
         }
 
         #page3:hover {
@@ -244,6 +248,16 @@
             background-color: rgb(170, 170, 170);
             cursor: pointer;
         }
+
+        .man {
+            background-color: black;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            position: relative;
+            top: 780px;
+            left: 580px;
+        }
     </style>
 </head>
 
@@ -254,11 +268,6 @@
     <button id="ao" class="buttoncls">whitemood</button>
     <button id="co" class="buttoncls">darkmood</button>
     <div id="page"></div>
-    <div id="page2"></div>
-    <div id="page3"></div>
-    <div id="page4"></div>
-
-
 
     <div id="chan">
         <div class="top-level bn" id="im" style="cursor: pointer;">
@@ -296,7 +305,32 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <div id="jqgame">
+        <button id="gamestart" style="position: absolute;left: 500px;top: 800px;">start</button>
+        <div class="man"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div id="page2"></div>
+    <div id="page3"></div>
+    <div id="page4"></div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script>
         $(document).ready(function () {
             $("#co").hide();
@@ -323,21 +357,23 @@
 
             $(".im1").hide();
             $("#im").click(function () {
+                $(".tilted1").addClass("re");
                 $(".im1").show();
                 $("#im").hide();
+                $(".tilted1").removeClass("restop");
             });
             $(".im1").click(function () {
                 $("#im").show();
                 $(".im1").hide();
-                $(".tilted1").removeClass("re")
+                $(".tilted1").addClass("restop");
             });
-            $("#im").click(function () {
-                $(".tilted1").addClass("re")
-
-            });
+            
 
 
+            
 
+            $("#jqgame").hide();
+            $("#chan").show();
             $("#page").click(function () {
                 $("#chan").show();
                 $("#page").css('z-index', '-996')
@@ -345,14 +381,47 @@
                 $("#page3").css('z-index', '-998')
                 $("#page4").css('z-index', '-999')
 
-                $("#page").css('background-color', 'rgb(220, 220, 220)')
+                $("#page").css('background-color', 'rgb(200, 200, 200)')
                 $("#page2").css('background-color', 'rgb(190, 190, 190)')
                 $("#page3").css('background-color', 'rgb(160, 160, 160)')
                 $("#page4").css('background-color', 'rgb(130, 130, 130)')
+
+
+                $("#page2").hover(function () {
+                    $("#page2").css('background-color', 'rgb(230, 230, 230)')
+
+                });
+                $("#page2").mouseleave(function () {
+                    $("#page2").css('background-color', 'rgb(190, 190, 190)')
+
+                });
+                $("#page").mouseleave(function () {
+                    $("#page").css('background-color', 'rgb(220, 220, 220)')
+
+                });
+                $("#page3").hover(function () {
+                    $("#page3").css('background-color', 'rgb(200, 200, 200)')
+
+                });
+                $("#page3").mouseleave(function () {
+                    $("#page3").css('background-color', 'rgb(160, 160, 160)')
+
+                });
+                $("#page4").hover(function () {
+                    $("#page4").css('background-color', 'rgb(170, 170, 170)')
+
+                });
+                $("#page4").mouseleave(function () {
+                    $("#page4").css('background-color', 'rgb(130, 130, 130)')
+
+                });
+
             });
+
 
             $("#page2").click(function () {
                 $("#chan").hide();
+                $("#jqgame").show();
                 $(".tilted1").removeClass("re")
                 $("#page").css('z-index', '-997')
                 $("#page2").css('z-index', '-996')
@@ -363,9 +432,45 @@
                 $("#page2").css('background-color', 'rgb(220, 220, 220)')
                 $("#page3").css('background-color', 'rgb(160, 160, 160)')
                 $("#page4").css('background-color', 'rgb(130, 130, 130)')
+
+                $("#page2").mouseleave(function () {
+                    $("#page2").css('background-color', 'rgb(220, 220, 220)')
+
+                });
+
+
+                $("#page").hover(function () {
+                    $("#page").css('background-color', 'rgb(236, 236, 236)')
+
+                });
+                $("#page").mouseleave(function () {
+                    $("#page").css('background-color', 'rgb(200, 200, 200)')
+
+                });
+                $("#page3").hover(function () {
+                    $("#page3").css('background-color', 'rgb(200, 200, 200)')
+
+                });
+                $("#page3").mouseleave(function () {
+                    $("#page3").css('background-color', 'rgb(160, 160, 160)')
+
+                });
+                $("#page4").hover(function () {
+                    $("#page4").css('background-color', 'rgb(170, 170, 170)')
+
+                });
+                $("#page4").mouseleave(function () {
+                    $("#page4").css('background-color', 'rgb(130, 130, 130)')
+
+                });
+
+
             });
+
+
             $("#page3").click(function () {
                 $("#chan").hide();
+                $("#jqgame").hide();
                 $(".tilted1").removeClass("re")
                 $("#page").css('z-index', '-998')
                 $("#page2").css('z-index', '-997')
@@ -376,9 +481,43 @@
                 $("#page2").css('background-color', 'rgb(190, 190, 190)')
                 $("#page3").css('background-color', 'rgb(220, 220, 220)')
                 $("#page4").css('background-color', 'rgb(130, 130, 130)')
+
+                $("#page2").hover(function () {
+                    $("#page2").css('background-color', 'rgb(230, 230, 230)')
+
+                });
+                $("#page2").mouseleave(function () {
+                    $("#page2").css('background-color', 'rgb(190, 190, 190)')
+
+                });
+                $("#page").hover(function () {
+                    $("#page").css('background-color', 'rgb(236, 236, 236)')
+
+                });
+                $("#page").mouseleave(function () {
+                    $("#page").css('background-color', 'rgb(200, 200, 200)')
+
+                });
+                $("#page3").mouseleave(function () {
+                    $("#page3").css('background-color', 'rgb(220, 220, 220)')
+
+                });
+                $("#page4").hover(function () {
+                    $("#page4").css('background-color', 'rgb(170, 170, 170)')
+
+                });
+                $("#page4").mouseleave(function () {
+                    $("#page4").css('background-color', 'rgb(130, 130, 130)')
+
+                });
+
+
+
             });
+
             $("#page4").click(function () {
                 $("#chan").hide();
+                $("#jqgame").hide();
                 $(".tilted1").removeClass("re")
                 $("#page").css('z-index', '-999')
                 $("#page2").css('z-index', '-998')
@@ -389,9 +528,46 @@
                 $("#page2").css('background-color', 'rgb(190, 190, 190)')
                 $("#page3").css('background-color', 'rgb(160, 160, 160)')
                 $("#page4").css('background-color', 'rgb(220, 220, 220)')
+
+                $("#page2").hover(function () {
+                    $("#page2").css('background-color', 'rgb(230, 230, 230)')
+
+                });
+                $("#page2").mouseleave(function () {
+                    $("#page2").css('background-color', 'rgb(190, 190, 190)')
+
+                });
+                $("#page").hover(function () {
+                    $("#page").css('background-color', 'rgb(236, 236, 236)')
+
+                });
+                $("#page").mouseleave(function () {
+                    $("#page").css('background-color', 'rgb(200, 200, 200)')
+
+                });
+
+                $("#page3").hover(function () {
+                    $("#page3").css('background-color', 'rgb(200, 200, 200)')
+
+                });
+                $("#page3").mouseleave(function () {
+                    $("#page3").css('background-color', 'rgb(160, 160, 160)')
+
+                });
+                $("#page4").mouseleave(function () {
+                    $("#page4").css('background-color', 'rgb(220, 220, 220)')
+
+                });
             });
 
 
+
+
+
+
+            $(".gamestart").click(function(){
+                $(".man").position(500,500)
+            });
         });
     </script>
 
