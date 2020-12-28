@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imglogo {
+            position: absolute;
+            top: 20%;
+            left: 45%;
+            border-radius: 100px;
+            cursor: pointer;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            z-index: -3;
+        }
+
+        @keyframes imglo {
+            0% {
+                background-color: rgb(255, 255, 255);
+                top: 20%;
+                left: 45%;
+                border-radius: 100px;
+
+            }
+
+            100% {
+                background-color: rgb(220, 220, 220);
+                top: 30%;
+                left: 45%;
+                border-radius: 100px;
+
+            }
+        }
+
+        .imglogo:hover {
+            background-color: rgb(220, 220, 220);
+            border: thin;
+            animation-name: imglo;
+            animation-duration: 1s;
+            position: absolute;
+            top: 30%;
+            left: 45%;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+        .imglogo1 {
+            position: absolute;
+            top: 20%;
+            left: 45%;
+            border-radius: 100px;
+            cursor: pointer;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            z-index: -3;
+        }
+
+        @keyframes imglo1 {
+            0% {
+                background-color: rgb(255, 255, 255);
+                top: 30%;
+                left: 45%;
+                border-radius: 100px;
+                height: 200px;
+                width: 200px;
+            }
+
+            100% {
+                background-color: rgb(220, 220, 220);
+                top: 25px;
+                left: 30%;
+                border-radius: 30px;
+                height: 800px;
+                width: 800px;
+            }
+        }
+
+        .imglogo1:hover {
+            background-color: rgb(220, 220, 220);
+            border: thin;
+            animation-name: imglo1;
+            animation-duration: 1s;
+            position: absolute;
+            top: 25px;
+            left: 30%;
+            border-radius: 30px;
+            height: 800px;
+            width: 800px;
+            cursor: auto;
+        }
+
+
+
+
+
+
+
+
+
+
+        .menubox {
+            display: none;
+            position: relative;
+            left: 200px;
+            top: 30px;
+            width: 100px;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+
+        .animate2 {
+            background-color: rgba(255, 255, 255, 0);
+            display: none;
+            border: 2px solid rgba(255, 255, 255, 0);
+            position: relative;
+            left: 100px;
+            top: 30px;
+            width: 100px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .animate3 {
+            background-color: rgba(255, 255, 255, 0);
+            display: none;
+            border: 2px solid rgba(255, 255, 255, 0);
+            position: relative;
+            left: 100px;
+            top: 30px;
+            width: 100px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .imglogo:hover .menubox {
+            display: block;
+            animation-name: animate;
+            animation-duration: 1s;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                left: 250px;
+                top: 30px;
+            }
+
+            100% {
+                opacity: 1;
+                left: 200px;
+                top: 30px;
+            }
+        }
+
+        .imglogo:hover .animate2 {
+            display: block;
+            animation-name: animate2;
+            animation-duration: 1s;
+        }
+
+        @keyframes animate2 {
+            0% {
+                opacity: 0;
+                left: 320px;
+                top: -100px;
+            }
+
+            100% {
+                opacity: 1;
+                left: 320px;
+                top: 25px;
+            }
+        }
+
+        .imglogo:hover .animate3 {
+            display: block;
+            animation-name: animate3;
+            animation-duration: 1s;
+        }
+
+        @keyframes animate3 {
+            0% {
+                opacity: 0;
+                left: 400px;
+                top: 10px;
+            }
+
+            100% {
+                opacity: 1;
+                left: 450px;
+                top: 10px;
+            }
+        }
+
+
+
+        .animate2:hover {
+            background-color: rgb(116, 116, 116);
+        }
+
+        .animate3:hover {
+            background-color: rgb(116, 116, 116);
+        }
+
+        .word {
+            background-color: rgb(116, 116, 116);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .word1 {
+            background-color: rgba(220, 220, 220, 0);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .aherf {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .imglogo:hover .aherf {
+            animation-name: aherfani;
+            animation-duration: 3s;
+        }
+
+        @keyframes aherfani {
+            0% {
+
+                color: rgb(51, 51, 51);
+            }
+
+            100% {
+                color: rgb(255, 255, 255);
+
+            }
+        }
+
+        .menubox:hover .word {
+            color: rgb(26, 26, 26);
+        }
+
+        .animate2:hover .word {
+            color: rgb(26, 26, 26);
+            animation-name: a2hw;
+            animation-duration: 1s;
+        }
+
+        @keyframes a2hw {
+            0% {
+                color: rgb(255, 255, 255);
+
+            }
+
+            100% {
+                color: rgb(26, 26, 26);
+
+            }
+        }
+
+        .animate3:hover .word {
+            color: rgb(26, 26, 26);
+            animation-name: a3h;
+            animation-duration: 1s;
+        }
+
+        @keyframes a3h {
+            0% {
+                color: rgb(255, 255, 255);
+            }
+
+            100% {
+                color: rgb(26, 26, 26);
+            }
+        }
+
+
+        .imgin {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: 2px;
+            background-color: rgb(116, 116, 116);
+            border-radius: 50px;
+
+        }
+
+        .menubox:hover .imgin {
+            background-color: rgb(0, 0, 0);
+            animation-name: imginani;
+            animation-duration: 1s;
+        }
+
+        @keyframes imginani {
+            0% {
+                background-color: rgb(220, 220, 220);
+            }
+
+            100% {
+                background-color: rgb(0, 0, 0);
+
+            }
+        }
+
+
+
+
+
+
+        .svg {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+
+        }
+
+        @keyframes svg {
+            0% {
+                left: 0px;
+                top: 0px;
+                opacity: 0;
+
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+                opacity: 1;
+
+            }
+        }
+
+        .imglogo:hover .svg {
+            animation-name: svg;
+            animation-duration: 3s;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+            z-index: -2;
+            cursor: default;
+        }
+
+        @keyframes svgs {
+            0% {
+                stroke-width: 4;
+                left: 0px;
+                top: -100px;
+                stroke: rgb(145, 145, 145);
+            }
+
+            100% {
+                stroke-width: 3;
+                left: 0px;
+                top: 50px;
+                stroke: rgb(112, 112, 112);
+            }
+        }
+
+        .imglogo:hover .svgs {
+            animation-name: svgs;
+            animation-duration: 3s;
+            stroke-width: 3;
+            left: 0px;
+            top: 50px;
+            stroke: rgb(112, 112, 112);
+        }
+
+
+
+
+
+
+
+
+
+        .svg2 {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+
+        }
+
+        @keyframes svg2 {
+            0% {
+                left: 0px;
+                top: 0px;
+                opacity: 0;
+
+            }
+
+            100% {
+                left: 0px;
+                top: 0px;
+                opacity: 1;
+
+            }
+        }
+
+        .imglogo:hover .svg2 {
+            animation-name: svg2;
+            animation-duration: 3s;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 1;
+            z-index: -2;
+            cursor: default;
+        }
+
+        @keyframes svg2s {
+            0% {
+                stroke-width: 4;
+                left: -100px;
+                top: 0px;
+                stroke: rgb(145, 145, 145);
+            }
+
+            100% {
+                stroke-width: 4;
+                left: 0px;
+                top: 0px;
+                stroke: rgb(112, 112, 112);
+            }
+        }
+
+        .imglogo:hover .svg2s {
+            animation-name: svg2s;
+            animation-duration: 3s;
+            stroke-width: 4;
+            left: 0px;
+            top: 0px;
+            stroke: rgb(112, 112, 112);
+        }
+
+        .contentext {
+            width: 500px;
+            position: relative;
+            top: 0px;
+            left: 200px;
+            opacity: 0;
+        }
+
+
+
+        @keyframes con {
+            0% {
+                top: 0px;
+                left: 200px;
+                opacity: 0;
+            }
+
+            100% {
+                top: 0px;
+                left: 200px;
+                opacity: 1;
+            }
+        }
+
+        .imglogo:hover .contentext {
+            animation-name: con;
+            animation-duration: 1s;
+            position: relative;
+            top: 0px;
+            left: 200px;
+            opacity: 1;
+            cursor: text;
+            color: rgb(116, 116, 116);
+        }
+
+        .ig {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 0px;
+            top: 300px;
+            opacity: 0;
+        }
+
+        @keyframes ig {
+            0% {
+                left: 0px;
+                top: 300px;
+                opacity: 0;
+            }
+
+            100% {
+                left: 500px;
+                top: 300px;
+                opacity: 0.8;
+            }
+        }
+
+        .imglogo:hover .ig {
+            animation-name: ig;
+            animation-duration: 4s;
+            opacity: 0.8;
+            position: relative;
+            left: 500px;
+        }
+
+        .fb {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 0px;
+            top: 300px;
+            opacity: 0;
+        }
+
+        @keyframes fb {
+            0% {
+                left: 0px;
+                top: 300px;
+                opacity: 0;
+            }
+
+            100% {
+                left: 500px;
+                top: 300px;
+                opacity: 0.8;
+            }
+        }
+
+        .imglogo:hover .fb {
+            animation-name: fb;
+            animation-duration: 3s;
+            opacity: 0.8;
+            position: relative;
+            left: 500px;
+        }
+
+
+        .gm {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 0px;
+            top: 300px;
+            opacity: 0;
+        }
+
+        @keyframes gm {
+            0% {
+                left: 0px;
+                top: 300px;
+                opacity: 0;
+            }
+
+            100% {
+                left: 500px;
+                top: 300px;
+                opacity: 0.8;
+            }
+        }
+
+        .imglogo:hover .gm {
+            animation-name: gm;
+            animation-duration: 2s;
+            opacity: 0.8;
+            position: relative;
+            left: 500px;
+        }
+
+        .igfbgm {
+            position: relative;
+            top: -220px;
+        }
+
+
+
+        .ag {
+            background-color: rgb(145, 145, 145);
+            animation-name: bg;
+            animation-duration: 1s;
+            background-color: rgb(255, 255, 255);
+        }
+
+        @keyframes bg {
+            0% {
+                background-color: rgb(145, 145, 145);
+            }
+
+            100% {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+
+
+        .bg {
+            background-color: rgb(255, 255, 255);
+            animation-name: ag;
+            animation-duration: 1s;
+            background-color: rgb(145, 145, 145);
+        }
+
+        @keyframes ag {
+            0% {
+                background-color: rgb(255, 255, 255);
+            }
+
+            100% {
+                background-color: rgb(145, 145, 145);
+            }
+        }
+
+
+
+        .h4s {
+            opacity: 1;
+        }
+
+        @keyframes h4s {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .imglogo:hover .h4s {
+            opacity: 0;
+            animation-name: h4s;
+            animation-duration: 1s;
+        }
+
+        .h4ss {
+            opacity: 0;
+        }
+
+        @keyframes h4ss {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .imglogo:hover .h4ss {
+            opacity: 1;
+            animation-name: h4ss;
+            animation-duration: 1s;
+        }
+
+        .buttoncls {
+            background-color: #cecece;
+            border: none;
+            color: rgb(82, 82, 82);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            position: absolute;
+            left: 600px;
+            top: 100px;
+            cursor: pointer;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .but {
+            display: none;
+        }
+
+        .imglogo:hover .but {
+            display: block;
+        }
+
+        .asb {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <div class="imglogo">
+        <h4 style="position: relative;top: 20px;left: 0px;text-align: center;color: rgb(110, 110, 110);" class="h4s">
+            BEAR:Hover Me</h4>
+        <h1 style="position: relative;top: -20px;left: 0px;text-align: center;color: rgb(80, 80, 80);" class="h4ss">HOME
+        </h1>
+        <img src="img/bearlogov2.png" alt="" style="width: 200px; height: 200px; position: absolute;top: -10%;left: 0%;">
+        <div class="asb">
+            <div class="menuboxbg">
+                <a href="index.html">
+                    <div class="menubox">
+                        <div class="word1">
+                            <img src="img/home.png" class="imgin">
+                        </div>
+                    </div>
+                </a>
+                <a href="portfolio.html" class="aherf">
+                    <div class="animate2" style="position: relative;left: 320px;top: 25px;">
+                        <div class="word">
+                            <h3>PortFolio</h3>
+                        </div>
+                    </div>
+                </a>
+                <a href="profile.html" class="aherf">
+                    <div class="animate3" style="position: relative;left: 450px;top: 10px;">
+                        <div class="word">
+                            <h3>ProFile</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="contentext">
+                <h3>
+                    <h1>Hi</h1> My name is Bear-Hsiung<br>
+                    <h1>This</h1> is my first web for my profile<br>
+                    <h1>You</h1> can add my email in the bottom<br>
+                    <h1>Also</h1> you can add my IG or fb
+                </h3>
+            </div>
+            <div class="igfbgm">
+                <a href="https://www.instagram.com/yizhikeaidexiong/"><img src="img/instagram.png" class="ig"></a>
+                <a href="https://www.facebook.com/profile.php?id=100001916392684"><img src="img/facebook.png" class="fb"></a>
+                <a href="https://www.google.com/intl/zh-TW/gmail/about/#"><img src="img/gmail.png" class="gm"></a>
+            </div>
+            <svg width="800" height="800" class="svg2 svg2s" style="cursor: default;">
+                <line x1="0" y1="750" x2="800" y2="750" />
+            </svg>
+
+            <svg width="800" height="800" class="svg svgs" style="cursor: default;">
+                <line x1="750" y1="800" x2="750" y2="0" />
+            </svg>
+            <div class="but">
+                <button id="ao" class="buttoncls">whitemood</button>
+                <button id="co" class="buttoncls">darkmood</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#co").hide();
+            $("#ao").click(function () {
+                $("body").removeClass("bg");
+                $("body").addClass("ag");
+                $("#co").show();
+                $("#ao").hide();
+            });
+            $("#co").click(function () {
+                $("body").removeClass("ag");
+                $("body").addClass("bg");
+                $("#ao").show();
+                $("#co").hide();
+            });
+            $(".imglogo").click(function () {
+                $(".imglogo").addClass("imglogo1");
+                $(".asb").show();
+            });
+            $(".imglogo").mouseleave(function () {
+                $(".imglogo").removeClass("imglogo1");
+                $(".asb").hide();
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            background-color: rgb(145, 145, 145);
+        }
+
+        .buttoncls {
+            background-color: #cecece;
+            border: none;
+            color: rgb(82, 82, 82);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            position: absolute;
+            left: 700px;
+            top: 850px;
+            cursor: pointer;
+            z-index: 0;
+        }
+
+        .div1 {
+            position: absolute;
+            top: 5%;
+            left: 30%;
+            border-radius: 30px;
+            width: 800px;
+            height: 800px;
+            background-color: rgb(220, 220, 220);
+            font-family: monospace;
+        }
+
+        .home {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            top: 800px;
+            left: 800px;
+            border-radius: 30px;
+            cursor: pointer;
+            opacity: 0.5;
+            
+        }
+        .home:hover {
+            opacity: 1;
+        }
+        .ag {
+            background-color: rgb(145, 145, 145);
+            animation-name: bg;
+            animation-duration: 1s;
+            background-color: rgb(255, 255, 255);
+        }
+        @keyframes bg {
+            0% {
+                background-color: rgb(145, 145, 145);
+            }
+
+            100% {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+
+
+        .bg {
+            background-color: rgb(255, 255, 255);
+            animation-name: ag;
+            animation-duration: 1s;
+            background-color: rgb(145, 145, 145);
+        }
+        @keyframes ag {
+            0% {
+                background-color: rgb(255, 255, 255);
+            }
+
+            100% {
+                background-color: rgb(145, 145, 145);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <div class="div1">
+       <a href="index.html"><img src="img/home.png" class="home"></a>
+    </div>
+    <button id="ao" class="buttoncls">whitemood</button>
+    <button id="co" class="buttoncls">darkmood</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#co").hide();
+            $("#ao").click(function () {
+                $("body").addClass("ag");
+                $("body").removeClass("bg");
+                $("#co").show();
+                $("#ao").hide();
+            });
+            $("#co").click(function () {
+                $("body").addClass("bg");
+                $("body").removeClass("ag");
+                $("#ao").show();
+                $("#co").hide();
+            });
+            $("#ao").click(function () {
+                $(".home").css('background-color', 'black');
+            });
+            $("#co").click(function () {
+                $(".home").css('background-color', 'transparent');
+            });
+        });
+    </script>
+</body>
+
+</html>
