@@ -271,6 +271,85 @@
             z-index: 5;
 
         }
+
+        .manani {
+            animation-duration: 1s;
+            animation-name: manani;
+        }
+
+        @keyframes manani {
+            0% {
+                left: 500px;
+            }
+
+            100% {
+                left: 10px;
+            }
+        }
+        .bounce {
+            animation-name: bounce;
+            animation-duration: 1s;
+            top: 720px;
+        }
+        @keyframes bounce {
+            0% {
+                top: 750px;
+
+            }
+            55% {
+                top: 660px;
+            }
+            100% {
+                top: 650px;
+            }
+            
+            
+        }
+        .bounce1 {
+            animation-name: bounce1;
+            animation-duration: 1s;
+        }
+        @keyframes bounce1 {
+            0% {
+                top: 650px;
+            }
+            45% {
+                top: 740px;
+            }
+            
+            100% {
+                top: 750px;
+            }
+            
+        }
+
+        .plbk {
+            background-color: black;
+            width: 20px;
+            height: 50px;
+            position: relative;
+            top: 700px;
+            left: 800px;
+            animation-name: playground;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes playground {
+            0% {
+                opacity: 0;
+                left: 800px;
+            }
+            50% {
+                opacity: 1;
+                
+            }
+            100% {
+                opacity: 0;
+                left: 200px;
+            }
+        }
+        
     </style>
 </head>
 
@@ -311,7 +390,7 @@
                 <div style="float:left">
                     <div id="view3d1" style="perspective: 400px;">
                         <div class="tilted1">
-                            <img src="img/right-arrow.png" alt="" style="width: 50px;height: 50px;position: relative;">
+                            <img src="img/euro-coin.png" alt="" style="width: 100px;height: 100px;position: relative;">
                         </div>
                     </div>
                 </div>
@@ -321,6 +400,7 @@
         <div id="jqgame">
             <button id="gamestart" style="position: absolute;left: 500px;top: 800px;">start</button>
             <div id="man"></div>
+            <div class="plbk1"></div>
         </div>
 
 
@@ -580,23 +660,21 @@
             $(document).ready(function () {
                 $(window).keydown(function (event) {
                     switch (event.keyCode) {
-                        case 38:
-                            man.style.top = Math.max(0, man.offsetTop - 10) + "px";
-                            break;
-                        case 40:
-                            man.style.top = Math.min(750, man.offsetTop + 10) + "px";
-                            break;
                         case 37:
-                            man.style.left = Math.max(0, man.offsetLeft - 10) + "px";
+                            man.style.left = Math.max(0, man.offsetLeft - 20) + "px";
+                            $("#man").removeClass("bounce")
                             break;
                         case 39:
-                            man.style.left = Math.min(750, man.offsetLeft + 10) + "px";
+                            man.style.left = Math.min(750, man.offsetLeft + 20) + "px";
+                            $("#man").removeClass("bounce")
                             break;
-
-                        case 37:
-                        case 38:
-                            man.style.top = Math.max(0, man.offsetTop - 100) + "px";
+                        case 32: 
+                            $("#man").addClass("bounce")
+                            $(".bounce").css('top', '650px')
+                            $("#man").removeClass("bounce1")
+                            $(".plbk1").addClass("plbk")
                             break;
+                            
                     }
 
 
@@ -605,9 +683,39 @@
 
                 });
             });
+            $(document).ready(function () {
+                $(window).keyup(function (event) {
+                    switch (event.keyCode) {
+                        case 37:
+                            man.style.left =   Math.max(0, man.offsetLeft - 20) + "px";
+                            $("#man").removeClass("bounce1")
+                            break;
+                        case 39:
+                            man.style.left = Math.min(750, man.offsetLeft + 20) + "px";
+                            $("#man").removeClass("bounce1")
+                            break;
+                        case 32: 
+                            $("#man").addClass("bounce1")
+                            $(".bounce").css('top', '750px')
+                            $("#man").removeClass("bounce")
+                            break;
+                            
+                    }
 
 
 
+
+
+                });
+            });
+            $("#gamestart").click(function(){
+                $(".plbk1").addClass("plbk")
+            });
+            if (("#man")){
+
+            } else {
+
+            }
 
         });
     </script>
