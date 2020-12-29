@@ -286,41 +286,48 @@
                 left: 10px;
             }
         }
+
         .bounce {
             animation-name: bounce;
             animation-duration: 1s;
             top: 720px;
         }
+
         @keyframes bounce {
             0% {
                 top: 750px;
 
             }
+
             55% {
                 top: 660px;
             }
+
             100% {
                 top: 650px;
             }
-            
-            
+
+
         }
+
         .bounce1 {
             animation-name: bounce1;
             animation-duration: 1s;
         }
+
         @keyframes bounce1 {
             0% {
                 top: 650px;
             }
+
             45% {
                 top: 740px;
             }
-            
+
             100% {
                 top: 750px;
             }
-            
+
         }
 
         .plbk {
@@ -334,22 +341,23 @@
             animation-duration: 3s;
             animation-iteration-count: infinite;
         }
-        
+
         @keyframes playground {
             0% {
                 opacity: 0;
                 left: 800px;
             }
+
             50% {
                 opacity: 1;
-                
+
             }
+
             100% {
                 opacity: 0;
                 left: 200px;
             }
         }
-        
     </style>
 </head>
 
@@ -402,20 +410,23 @@
             <div id="man"></div>
             <div class="plbk1"></div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
         <div id="page2"></div>
-        <div id="page3"></div>
+
+
+
+
+        <div id="page3">
+            <div id="svgpaint">
+                <svg width="800px" height="800px">
+                    <line x1=""x2=""y1=""y2=""/>
+                </svg>
+            </div>
+        </div>
+
+
+
+
+
         <div id="page4"></div>
 
 
@@ -668,13 +679,13 @@
                             man.style.left = Math.min(750, man.offsetLeft + 20) + "px";
                             $("#man").removeClass("bounce")
                             break;
-                        case 32: 
+                        case 32:
                             $("#man").addClass("bounce")
                             $(".bounce").css('top', '650px')
                             $("#man").removeClass("bounce1")
                             $(".plbk1").addClass("plbk")
                             break;
-                            
+
                     }
 
 
@@ -687,19 +698,19 @@
                 $(window).keyup(function (event) {
                     switch (event.keyCode) {
                         case 37:
-                            man.style.left =   Math.max(0, man.offsetLeft - 20) + "px";
+                            man.style.left = Math.max(0, man.offsetLeft - 20) + "px";
                             $("#man").removeClass("bounce1")
                             break;
                         case 39:
                             man.style.left = Math.min(750, man.offsetLeft + 20) + "px";
                             $("#man").removeClass("bounce1")
                             break;
-                        case 32: 
+                        case 32:
                             $("#man").addClass("bounce1")
                             $(".bounce").css('top', '750px')
                             $("#man").removeClass("bounce")
                             break;
-                            
+
                     }
 
 
@@ -708,10 +719,10 @@
 
                 });
             });
-            $("#gamestart").click(function(){
+            $("#gamestart").click(function () {
                 $(".plbk1").addClass("plbk")
             });
-            if (("#man")){
+            if (("#man")) {
 
             } else {
 
